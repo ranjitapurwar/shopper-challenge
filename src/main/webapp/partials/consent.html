@@ -7,18 +7,16 @@
 <body>
 <div ng-controller="consentController" class="label-centered container fluid">
     <div class="row">
-        <div style="text-align:center" class="col-2"></div>
-        <div ng-show="newApplicant" style="text-align:center" class="col-8">
-            <h4>Instacart would now be running a background check...</h4>
-            <div>Please click the button below if you understand and consent to it</div>
+        <div ng-show="newApplicant" style="text-align:center" class="col-12">
+            <h2>Instacart would now be running a background check...</h2>
+            <h5>Please click the button below if you understand and consent to it</h5>
             <div style="text-align:center;padding-top: 20px"><button class="btn btn-danger" ng-click="submitBackGroundCheck()">I agree</button></div>
         </div>
-        <div ng-show="!newApplicant" style="text-align:center" class="col-8">
+        <div ng-show="!newApplicant" style="text-align:center" class="col-12">
                 <h2>Application was successfully submitted !</h2>
                 <h2>What's next ? </h2>
                 <h2>You shall hear from us soon.</h2>
         </div>
-        <div label-centered class="col-2"></div>
     </div>
 </div>
 </body>

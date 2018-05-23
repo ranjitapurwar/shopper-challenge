@@ -15,7 +15,7 @@ function formController($scope, $location, $http, $log) {
             $scope.shopper = response.data;
             $scope.successOnApply = true;
             if($scope.newApplicant) {
-                //$location.url("/consent");
+                $location.url("/consent");
                 $scope.newApplicant = false;
             } else {
                 $scope.successOnUpdate = true;
