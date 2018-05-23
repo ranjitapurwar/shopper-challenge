@@ -1,5 +1,46 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Shopper Challenge</title>
+    <!--JQuery-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!-- load AngularJS via CDN asynchronously-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script>
+
+    <!-- load Bootstrap CSS via CDN asynchronously-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous">
+
+    <!--load Bootstrap Javascript via CDN asynchronously-->
+    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+</head>
 <body>
-<h2>Hello World!</h2>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkgreen">
+    <a class="navbar-brand"><img src="img/background6.png" width="30" height="30" class="d-inline-block align-top"
+                                 alt=""></a>
+</nav>
+<div ng-app="myApp">
+    <ng-view></ng-view>
+</div>
+
+<script src="js/consentCtrl.js" defer></script>
+<script src="js/formCtrl.js" defer></script>
+<script src="js/app.js" defer></script>
+
+<script src="js/config.js" defer></script>
+<script src="js/mainCtrl.js" defer></script>
+
+<link rel="stylesheet" href="css/app.css">
 </body>
 </html>
+
+
+
