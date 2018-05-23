@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -21,6 +22,7 @@ import java.text.MessageFormat;
 public class ShopperApi {
 
         private static final Logger log = LoggerFactory.getLogger(ShopperApi.class);
+
 
         @Autowired
         private ShopperService shopperService;

@@ -7,5 +7,5 @@
     
     <bean id="shopperService" class="com.shopper.ws.service.impl.ShopperServiceImpl">
     </bean>
-    
+
 </beans>
