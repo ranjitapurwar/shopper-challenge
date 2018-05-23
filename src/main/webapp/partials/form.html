@@ -8,6 +8,71 @@
 <body>
 
 <div ng-controller="formController" class="label-centered container fluid">
+
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-4">
+            <h1>Become a shopper at Instacart !</h1>
+            <form class="form-vertical" id="shopperForm" name="shopperForm" ng-submit="submit()">
+                <fieldset>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <input class="input form-control" placeholder="First Name" type="text" id="firstName"
+                                   name="title" maxlength="255" ng-model="shopper.firstName" required>
+                            <div class="alert alert-error" ng-show="shopper.firstName.length == 255">Character limit
+                                of 255 reached
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <input class="input form-control" placeholder="Last Name" type="text" id="lastName"
+                                   name="lastName" ng-model="shopper.lastName" required/>
+                            <div class="alert alert-error" ng-show="shopper.lastName.length == 255">Character limit
+                                of 255 reached
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group" ng-class="{error: shopperForm.email.$invalid}">
+                        <div class="form-group">
+                            <input class="input form-control" placeholder="Email" type="email" id="email"
+                                   name="email" ng-disabled="!newApplicant" ng-model="shopper.email" required/>
+                            <div class="alert alert-error" ng-show="shopper.email.length == 255">Character limit of
+                                5 reached
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group" ng-class="{error: shopperForm.phone.$invalid}">
+                        <div class="form-group">
+                            <input class="input form-control" type="text" placeholder="Phone Number" id="phone"
+                                   name="phone" ng-model="shopper.phoneNumber" ng-pattern="/^[1-9][0-9]{9}$/" required/>
+                            <!--<span ng-show="shopperForm.phone.$error.pattern">Not a valid number!</span>-->
+                        </div>
+                    </div>
+                    <div class="control-group" ng-class="{error: shopperForm.zip.$invalid}">
+                        <div class="form-group">
+                            <input class="input form-control" placeholder="Zip Code" type="text" id="zip" name="zip"
+                                   ng-model="shopper.zipCode" required/>
+                            <!--<div class="invalid-feedback" ng-show="invalidZip">Please enter valid zip Code!</div>-->
+                        </div>
+                    </div>
+                    <div class="centered">
+                        <button type="submit" ng-show="newApplicant" class="btn btn-primary btn-lg">Apply Now
+                        </button>
+                        <div style="padding-bottom: 15px" ng-show="!newApplicant && !successOnUpdate">To make
+                            changes to the application, press update.
+                        </div>
+                        <div style="padding-bottom: 15px" ng-show="successOnUpdate">Application Updated !!
+                        </div>
+                        <button type="submit" ng-show="!newApplicant" class="btn btn-primary btn-lg">Update
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-3"><img src="img/background2.jpg" width="275" height="450" class="d-inline-block align-top"
+                                alt=""></div>
+    </div>
 </div>
 </body>
 </html>

@@ -54,6 +54,7 @@ public class StartServer {
                 WebAppContext ctx = new WebAppContext();
 
                 HashSessionManager sessManager = new HashSessionManager();
+                sessManager.setSessionCookie(System.getProperty("jetty.SessionCookie", "shch"));
                 sessManager.setSessionPath(System.getProperty("jetty.SessionPath", "/"));
                 ctx.getSessionHandler().setSessionManager(sessManager);
                 ctx.setContextPath(contextPath);

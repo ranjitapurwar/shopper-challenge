@@ -1,5 +1,6 @@
-function consentController($scope, $location) {
+function consentController($scope) {
+    $scope.newApplicant = true;
     $scope.submitBackGroundCheck = function(){
-        $location.path("/");
+        $scope.newApplicant = false;
     };
 };

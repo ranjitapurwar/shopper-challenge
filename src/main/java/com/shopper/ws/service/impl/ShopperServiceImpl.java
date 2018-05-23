@@ -16,22 +16,13 @@ public class ShopperServiceImpl implements ShopperService {
 
 
     public Shopper createShopper(Shopper shopperDTO) {
-        Shopper shopper = null;
-
-        // Save data into a database
-        shopper = this.saveShopper(shopperDTO);
+        //Shopper shopper = null;
 
         // Return back the shopper
-        return shopper;
+        return shopperDTO;
     }
 
     public Shopper getShopper(Long id) {
-        Shopper shopper = null;
-        return shopper;
-    }
-
-
-    private Shopper saveShopper(Shopper shopperDTO) {
         Shopper shopper = null;
         return shopper;
     }
