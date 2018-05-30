@@ -1,7 +1,9 @@
 Readme for shopper-challenge project
 --------------------------
 Language: Java 1.8 (Project has been compiled using Java 1.8 though newer features of Java 8 haven't been used. Java 1.8 made it easier to find and include dependencies)
+
 Main libraries used: jax-rs, jersey, spring, jetty
+
 Frontend-libraries used: angularjs, bootstrap
 
 To test the service
